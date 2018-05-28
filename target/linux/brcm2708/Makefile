@@ -14,7 +14,7 @@ FEATURES:=ext4 audio usb usbgadget display gpio fpu squashfs
 MAINTAINER:=Álvaro Fernández Rojas <noltari@gmail.com>
 SUBTARGETS:=bcm2708 bcm2709 bcm2710
 
-KERNEL_PATCHVER:=4.9
+KERNEL_PATCHVER:=4.14
 
 define Target/Description
 	Build firmware image for Broadcom BCM27xx SoC devices.
@@ -27,7 +27,7 @@ DEFAULT_PACKAGES += \
 	kmod-usb-hid \
 	kmod-sound-core kmod-sound-arm-bcm2835 \
 	kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1 \
-	brcmfmac-firmware-43430-sdio kmod-brcmfmac wpad-mini \
+	brcmfmac-firmware-43430-sdio brcmfmac-firmware-43455-sdio kmod-brcmfmac wpad-mini \
 	partx-utils mkf2fs e2fsprogs
 
 KERNELNAME:=Image dtbs
